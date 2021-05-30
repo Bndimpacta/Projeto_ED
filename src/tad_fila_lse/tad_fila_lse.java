@@ -17,7 +17,6 @@ public class tad_fila_lse {
 		System.out.println("\n Descrição" + "Description \n");
 		
 		Scanner entrada = new Scanner(System.in);
-		int indice = 0;
 		String elemento = null;
 		boolean back = false;		
 		if(back == false) {

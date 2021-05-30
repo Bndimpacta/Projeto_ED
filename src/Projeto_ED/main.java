@@ -2,9 +2,11 @@ package Projeto_ED;
 
 import java.util.Scanner;
 
+import tad_arvore_binaria.tad_arvore_binaria;
 import tad_fila_array.tad_fila_array;
 import tad_fila_lse.tad_fila_lse;
 import tad_lista_arranjo.tad_lista_arranjo;
+import tad_lista_de_nodos.tad_lista_de_nodos;
 import tad_pilha_array.tad_pilha_array;
 import tad_pilha_lse.tad_pilha_lse;
 
@@ -21,6 +23,8 @@ public class main {
 		tad_pilha_lse pilhaLse = new tad_pilha_lse();
 		tad_fila_array filaArray = new tad_fila_array();
 		tad_fila_lse filaLse = new tad_fila_lse();
+		tad_lista_de_nodos listaNodos = new tad_lista_de_nodos(); 
+		tad_arvore_binaria arvoreBinaria = new tad_arvore_binaria(); 
 		
 		Scanner entrada = new Scanner(System.in);
 		boolean sair = false;
@@ -62,14 +66,14 @@ public class main {
 				case 5: //TAD-Fila-LSE
 					filaLse.fila_lse();
 					break;
-				case 6: 
-					//TAD-Lista de Nodos
+				case 6: //TAD-Lista de Nodos
+					listaNodos.lista_de_nodos();
 					break;
 				case 7: 
 					//TAD-Árvore Genérica
 					break;
-				case 8: 
-					//TAD-Árvore Binária
+				case 8: //TAD-Árvore Binária//Apresenta Erro
+					arvoreBinaria.arvore_binaria();
 					break;
 				case 9: 
 					//TAD-Fila de Prioridade
