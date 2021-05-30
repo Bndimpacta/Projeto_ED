@@ -192,6 +192,18 @@ public class NodePositionList<TIPO> implements PositionList<TIPO>{
 		header.setNext(validaPosition); 		
 	}
 	
+	public Position<TIPO>find(Position<TIPO> auxi,TIPO v){
+		Position<TIPO> aux = auxi;
+			if (aux.elemento()==v){
+				return aux;
+			}
+			else {
+				aux = find(next(auxi),v);
+			}
+
+		return aux;
+	}
+	
 	public static <TIPO> String toString(PositionList<TIPO> l) {
 
 		String elementosLista = "";

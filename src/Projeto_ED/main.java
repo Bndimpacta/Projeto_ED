@@ -7,6 +7,9 @@ import tad_fila_array.tad_fila_array;
 import tad_fila_lse.tad_fila_lse;
 import tad_lista_arranjo.tad_lista_arranjo;
 import tad_lista_de_nodos.tad_lista_de_nodos;
+import tad_mapa.tad_mapa;
+import tad_mapa_ordenado_abb.tad_mapa_ordenado_abb;
+import tad_ordenado_avl.tad_ordenado_avl;
 import tad_pilha_array.tad_pilha_array;
 import tad_pilha_lse.tad_pilha_lse;
 
@@ -26,6 +29,11 @@ public class main {
 		tad_lista_de_nodos listaNodos = new tad_lista_de_nodos(); 
 		tad_arvore_binaria arvoreBinaria = new tad_arvore_binaria(); 
 		
+		tad_mapa mapa = new tad_mapa();
+		
+		tad_mapa_ordenado_abb mapaOrdenado = new tad_mapa_ordenado_abb();
+		tad_ordenado_avl mapaOrdenadoAvl = new tad_ordenado_avl();
+		
 		Scanner entrada = new Scanner(System.in);
 		boolean sair = false;
 		while(!sair){
@@ -36,9 +44,9 @@ public class main {
 			System.out.println("3 - TAD-Pilha-LSE");
 			System.out.println("4 - TAD-Fila-Array");
 			System.out.println("5 - TAD-Fila-LSE");
-			System.out.println("6 - TAD-Lista de Nodos");
+			System.out.println("6 - TAD-Lista de Nodos //com erros");
 			System.out.println("7 - TAD-Árvore Genérica");
-			System.out.println("8 - TAD-Árvore Binária");
+			System.out.println("8 - TAD-Árvore Binária //com erros");
 			System.out.println("9 - TAD-Fila de Prioridade");
 			System.out.println("10 - TAD-Mapa");
 			System.out.println("11 - TAD-Dicionário");
@@ -66,29 +74,27 @@ public class main {
 				case 5: //TAD-Fila-LSE
 					filaLse.fila_lse();
 					break;
-				case 6: //TAD-Lista de Nodos
+				case 6: //TAD-Lista de Nodos /Apresenta Erro
 					listaNodos.lista_de_nodos();
 					break;
-				case 7: 
-					//TAD-Árvore Genérica
+				case 7: //TAD-Árvore Genérica
 					break;
-				case 8: //TAD-Árvore Binária//Apresenta Erro
+				case 8: //TAD-Árvore Binária  /Apresenta Erro
 					arvoreBinaria.arvore_binaria();
 					break;
 				case 9: 
 					//TAD-Fila de Prioridade
 					break;
-				case 10: 
-					//TAD-Mapa
+				case 10: //TAD-Mapa
+					mapa.tadMapa();
 					break;
-				case 11: 
-					//TAD-Dicionário
+				case 11: //TAD-Dicionário
 					break;
-				case 12: 
-					//TAD-Mapa Ordenado - ABB
+				case 12: //TAD-Mapa Ordenado - ABB
+					mapaOrdenado.tadMapaOrdenado();
 					break;
-				case 13: 
-					//TAD-Mapa Ordenado - AVL
+				case 13: //TAD-Mapa Ordenado - AVL
+					mapaOrdenadoAvl.tadMapaOrdenadoAvl();
 					break;
 				case 14: 
 					//TAD-Grafos
