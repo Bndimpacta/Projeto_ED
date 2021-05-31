@@ -7,17 +7,25 @@ import Projeto_ED.main;
 public class tad_lista_de_nodos {
 
 	main principal = new main();
-	NodePositionList listaNodos = new NodePositionList();
+	NodePositionList<Integer> listaNodos = new NodePositionList<Integer>();
 	
 	public void lista_de_nodos() {
 		System.out.println("\n ===== TAD-LISTA-DE-NODOS ===== \n");
 		System.out.println("     Antes!!!\n" +
 		"Hora da explicação");
-		System.out.println("\n Descrição" + "Description \n");
+		System.out.println("\n Índices não são a única maneira de se referir ao lugar onde um\r\n"
+				+ "elemento aparece em uma sequência.\r\n"
+				+ "\r\n"
+				+ "Se existe uma sequência implementada sobre uma LSE ou LDE, então\r\n"
+				+ "é mais natural e eficiente usar um nodo em vez de um índice como\r\n"
+				+ "forma de identificar onde acessar ou atualizar essa lista.\r\n"
+				+ "\r\n"
+				+ "Nesta seção, define-se o TAD lista de nodos, que usando um TAD\r\n"
+				+ "Posição. \n");
 		
 		Scanner entrada = new Scanner(System.in);
 		int posicao = 0;
-		String elemento = null;
+		int elemento = 0;
 		boolean back = false;		
 		if(back == false) {
 			while(!back) {
@@ -28,8 +36,7 @@ public class tad_lista_de_nodos {
 				System.out.println("3 - Retorna a posição do último elemento da lista");
 				System.out.println("4 - Retorna o tamanho da lista");
 				System.out.println("5 - Retorna se lista está ou não vazia.");
-				System.out.println("6 - Remover");
-				System.out.println("7 - Consultar");
+				System.out.println("6 - Consultar");
 				System.out.print("Opção escolhida: ");
 				int escolha = entrada.nextInt();
 				switch(escolha) {
@@ -51,10 +58,7 @@ public class tad_lista_de_nodos {
 					case 5: //Retorna se lista está ou não vazia.
 						isEmpty();
 					break;
-					case 6: //Remover
-						remove();
-					break;
-					case 7:  //Consultar
+					case 6:  //Consultar
 						System.out.println("resultado = " + listaNodos.toString());
 					break;
 					default: System.out.println("Opção inválida!");
@@ -63,16 +67,6 @@ public class tad_lista_de_nodos {
 		}else {
 			principal.estruturas();
 		}
-	}
-
-	private void remove() { //com problemas
-		Scanner entrada = new Scanner(System.in);
-		System.out.println("\nO metodo remove:  o metodo recebera como parametro o primeiro elemento da lista \n" +
-				"é ira excluir o elemento selecionado por você");
-		System.out.print("Qual elemento voê deseja remover: ");
-		String remover = entrada.next();
-		Position<String> removerNodo = listaNodos.find(listaNodos.first(), remover);
-		System.out.println("Elemento removido da pilha: " + listaNodos.remove(removerNodo));
 	}
 
 	private void isEmpty() {
@@ -121,7 +115,7 @@ public class tad_lista_de_nodos {
 		System.out.print("O último elemento da sua lista é " + nodeLista.elemento());
 	}
 
-	private void adds(String elemento) {
+	private void adds(int elemento) {
 		Scanner entrada = new Scanner(System.in);
 		int escolha = 0;
 		System.out.println("\nDentro dos metodos de Inserir no TAD lista de nodos, \n" +
@@ -135,14 +129,14 @@ public class tad_lista_de_nodos {
 			case 0:
 				System.out.println("\nO método addFirst(e): Insere o novo elemento como o primeiro elemento da lista. \n");
 				System.out.print("Digite o elemento que será inserido no inicio da lista: ");
-				elemento = entrada.next();
+				elemento = entrada.nextInt();
 				listaNodos.addFirst(elemento);
 				System.out.println(listaNodos.toString());
 				break;
 			case 1:
 				System.out.println("\nO método addLast(e): Insere o novo elemento como último elemento da lista. \n");
 				System.out.print("Digite o elemento que será inserido no final da lista: ");
-				elemento = entrada.next();
+				elemento = entrada.nextInt();
 				listaNodos.addLast(elemento);
 				System.out.println(listaNodos.toString());
 				break;

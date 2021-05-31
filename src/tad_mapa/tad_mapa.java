@@ -13,7 +13,18 @@ public class tad_mapa {
 		System.out.println("\n ===== TAD-MAPA ===== \n");
 		System.out.println("     Antes!!!\n" +
 		"Hora da explicação");
-		System.out.println("\n Descrição" + "Description \n");
+		System.out.println("\n Mapas permitem armazenar elementos que podem ser localizados\r\n"
+				+ "rapidamente usando chaves.\r\n"
+				+ "\r\n"
+				+ "Um mapa armazena um par chave-valor (k,v), chamado de entradas,\r\n"
+				+ "onde k é a chave e v é o valor correspondente.\r\n"
+				+ "\r\n"
+				+ "O TAD mapa requer que cada chave seja única.\r\n"
+				+ "\r\n"
+				+ "Num mapa que armazena um registro de estudantes (como o nome\r\n"
+				+ "do estudante, endereço e suas notas), a chave pode ser o RA.\r\n"
+				+ "\r\n"
+				+ "A chave pode ser vista como um “endereço” para um objeto. \n");
 		
 		Scanner entrada = new Scanner(System.in);
 		int chave = 0;

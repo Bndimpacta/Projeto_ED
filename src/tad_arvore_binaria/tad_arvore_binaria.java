@@ -13,7 +13,37 @@ public class tad_arvore_binaria {
 		System.out.println("\n ===== TAD-ÁRVORE-BINÁRIA ===== \n");
 		System.out.println("     Antes!!!\n" +
 		"Hora da explicação");
-		System.out.println("\n Descrição" + "Description \n");
+		System.out.println("\n Uma árvore binária é uma árvore ordenada com as seguintes\r\n"
+				+ "propriedades:\r\n"
+				+ "\r\n"
+				+ "Todos os nodos têm no máximo dois filhos.\r\n"
+				+ "\r\n"
+				+ "Cada nodo filho é rotulado como sendo um filho da direita ou um filho da\r\n"
+				+ "esquerda.\r\n"
+				+ "\r\n"
+				+ "O filho da esquerda precede o filho da direita na ordenação dos filhos de\r\n"
+				+ "um nodo.\r\n"
+				+ "\r\n"
+				+ "A subárvore filho da direita é chamada de subárvore direita.\r\n"
+				+ "\r\n"
+				+ "A subárvore filho da esquerda é chamada de subárvore esquerda.\r\n"
+				+ "\r\n"
+				+ "A árvore binária é própria (ou cheia) se cada nodo tem 0 ou 2 filhos.\r\n"
+				+ "\r\n"
+				+ "Uma árvore binária que não é própria é imprópria. \n" 
+				+ "Pode-se definir uma árvore binária de maneira recursiva:\r\n"
+				+ "\r\n"
+				+ "Uma árvore binária T:\r\n"
+				+ "\r\n"
+				+ "É vazia ou\r\n"
+				+ "\r\n"
+				+ "Possui:\r\n"
+				+ "\r\n"
+				+ "Um nodo r chamado de raiz de T que armazena um elemento.\r\n"
+				+ "\r\n"
+				+ "Subárvore esquerda de T.\r\n"
+				+ "\r\n"
+				+ "Subárvore direita de T.");
 		
 		Scanner entrada = new Scanner(System.in);
 		int indice = 0;
@@ -24,7 +54,6 @@ public class tad_arvore_binaria {
 				System.out.println("\n0 - Sair");
 				System.out.println("1 - Inserir");
 				System.out.println("2 - Remover");
-				System.out.println("3 - desenhar arvore");
 				System.out.print("Opção escolhida: ");
 				int escolha = entrada.nextInt();
 				switch(escolha) {
@@ -35,10 +64,7 @@ public class tad_arvore_binaria {
 						addRoot(elemento);
 					break;
 					case 2: //Remover
-						//dequeue();
-					break;
-					case 3:  //pilha esta vazia
-						desenhaArvore();
+						//remove(elemento);
 					break;
 					default: System.out.println("Opção inválida!");
 				}
@@ -47,14 +73,19 @@ public class tad_arvore_binaria {
 			principal.estruturas();
 		}
 	}
-	
-	public void desenhaArvore() {
-		arvoreBinaria.desenhaArvore(arvoreBinaria, arvoreBinaria.root(), 0, 0);
-	}
+
+	/*private void remove(String elemento) {
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("\nO método remove(v): Insere a raiz em uma árvore vazia. \n");
+		System.out.print("Digite o elemento que será removido: ");
+		elemento = entrada.next();
+		arvoreBinaria.remove(elemento);
+		System.out.print(arvoreBinaria.root());
+	}*/
 
 	public void addRoot(String elemento) {
 		Scanner entrada = new Scanner(System.in);
-		System.out.println("\nO método Insere a raiz em uma árvore vazia. \n");
+		System.out.println("\nO método addRoot(e): Insere a raiz em uma árvore vazia. \n");
 		System.out.print("Digite o elemento que será inserido: ");
 		elemento = entrada.next();
 		arvoreBinaria.addRoot(elemento);

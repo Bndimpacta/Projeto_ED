@@ -4,6 +4,7 @@ import java.util.Iterator;
 import tad_pilha_lse.NodeStack;
 public class NodePositionList<TIPO> implements PositionList<TIPO>{
 
+
 	protected int numElementos;
 	protected DNode<TIPO> header, trailer;
 	
@@ -192,18 +193,6 @@ public class NodePositionList<TIPO> implements PositionList<TIPO>{
 		header.setNext(validaPosition); 		
 	}
 	
-	public Position<TIPO>find(Position<TIPO> auxi,TIPO v){
-		Position<TIPO> aux = auxi;
-			if (aux.elemento()==v){
-				return aux;
-			}
-			else {
-				aux = find(next(auxi),v);
-			}
-
-		return aux;
-	}
-	
 	public static <TIPO> String toString(PositionList<TIPO> l) {
 
 		String elementosLista = "";
@@ -214,7 +203,17 @@ public class NodePositionList<TIPO> implements PositionList<TIPO>{
 
 		return "[" + elementosLista + "]";
 	}
-	
+	public Position<TIPO>find(Position<TIPO> auxi,String remover){
+		Position<TIPO> aux = auxi;
+			if (aux.elemento()==remover){
+				return aux;
+			}
+			else {
+				aux = find(next(auxi),remover);
+			}
+
+		return aux;
+	}
 	public Iterator<TIPO> iterator() { return new ElementIterator<TIPO>(this); }
 
 	public String toString() { return toString(this); }

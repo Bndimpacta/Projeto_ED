@@ -10,9 +10,7 @@ class HashTableMultiMapTest {
 
 	void test() {
 
-	HashTableMultiMap<Integer, String> D =
-
-	new HashTableMultiMap<Integer, String>();
+	HashTableMultiMap<Integer, String> D = new HashTableMultiMap<Integer, String>();
 
 	assertEquals("5=A", D.put(5, "A").toString());
 
