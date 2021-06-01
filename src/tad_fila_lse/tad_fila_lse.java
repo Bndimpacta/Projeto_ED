@@ -14,7 +14,18 @@ public class tad_fila_lse {
 		System.out.println("\n ===== TAD-FILA-LSE ===== \n");
 		System.out.println("     Antes!!!\n" +
 		"Hora da explicação");
-		System.out.println("\n Descrição" + "Description \n");
+		System.out.println("\nA fila é uma coleção de objetos que são inseridos e removidos de acordo com o princípio:\n" 
+				+ "“o primeiro que entra é o primeiro que sai”(First-In-First-Out: FIFO).\n" 
+				+"A implementação com LSE é eficiente, e define-se que a frente da fila seja o início da lista e que o final da fila seja\n" 
+				+ "o final da lista.\r\n"
+				+ "Definem-se duas variáveis f e r em que f é um índice de uma célula de Q que guarda o primeiro elemento da fila\n" 
+				+ "(que é o próximo candidato à remoção no caso de uma operação dequeue), a não ser que a fila esteja vazia (e neste caso f = r).\n"
+				+ "Já o r é um índice para a próxima posição livre em Q.\r\n"
+				+ "Inicialmente, atribui-se f = r = 0, indicando que a fila está vazia. Quando se remove um elemento da frente da fila,\n" 
+				+ "incrementa-se f para indicar a próxima célula. Da mesma forma, quando se acrescenta um elemento, ele é armazenado em Q[r],\n" 
+				+ "e incrementa-se r para indicar a próxima célula livre em Q. Esse esquema permite implementar os métodos front,\n"
+				+ "enqueue e dequeue sem o custo adicional de deslocamento dos elementos.\r\n"
+				+ " \n");
 		
 		Scanner entrada = new Scanner(System.in);
 		String elemento = null;

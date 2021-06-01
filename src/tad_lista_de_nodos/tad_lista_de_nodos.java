@@ -13,15 +13,10 @@ public class tad_lista_de_nodos {
 		System.out.println("\n ===== TAD-LISTA-DE-NODOS ===== \n");
 		System.out.println("     Antes!!!\n" +
 		"Hora da explicação");
-		System.out.println("\n Índices não são a única maneira de se referir ao lugar onde um\r\n"
-				+ "elemento aparece em uma sequência.\r\n"
-				+ "\r\n"
-				+ "Se existe uma sequência implementada sobre uma LSE ou LDE, então\r\n"
-				+ "é mais natural e eficiente usar um nodo em vez de um índice como\r\n"
-				+ "forma de identificar onde acessar ou atualizar essa lista.\r\n"
-				+ "\r\n"
-				+ "Nesta seção, define-se o TAD lista de nodos, que usando um TAD\r\n"
-				+ "Posição. \n");
+		System.out.println("\nDefine-se Lista de Nodos usando TAD Posição,\n" 
+		+ "então a lista é como um repositório de elementos mantida em ordem linear.\n"
+		+ "Então, em uma lista, uma posição p estará sempre “depois” de uma posição q e “antes” de uma posição s \n"
+		+ "(a menos que p seja a primeira ou a última posição).\n");
 		
 		Scanner entrada = new Scanner(System.in);
 		int posicao = 0;

@@ -51,6 +51,7 @@ public class tad_arvore_binaria {
 		boolean back = false;		
 		if(back == false) {
 			while(!back) {
+				System.out.println("\nMetodos");
 				System.out.println("\n0 - Sair");
 				System.out.println("1 - Inserir");
 				System.out.println("2 - Remover");
@@ -59,7 +60,7 @@ public class tad_arvore_binaria {
 				switch(escolha) {
 					case 0: //Sair
 						back = true;
-					break;
+					break; 
 					case 1: //Inserir
 						addRoot(elemento);
 					break;
@@ -88,8 +89,38 @@ public class tad_arvore_binaria {
 		System.out.println("\nO método addRoot(e): Insere a raiz em uma árvore vazia. \n");
 		System.out.print("Digite o elemento que será inserido: ");
 		elemento = entrada.next();
+		arvoreBinaria.root();
 		arvoreBinaria.addRoot(elemento);
-		System.out.print(arvoreBinaria.root());
+		arvoreBinaria.desenhaArvore(arvoreBinaria, arvoreBinaria.root(), 0, 0);
+		System.out.print(arvoreBinaria.toString());
 	}
-	
+
+	public LinkedBinaryTree<String> BuildExpression(String E){
+		ArrayStack<LinkedBinaryTree<String>> S = new ArrayStack<LinkedBinaryTree<String>>();
+		
+		for (int i=0; i<E.length();i++){
+			if(E.charAt(i)!=')' && E.charAt(i)!='(') {
+				LinkedBinaryTree<String> arvoreBinaria = new LinkedBinaryTree<String>();
+				arvoreBinaria.addRoot(Character.toString(E.charAt(i)));
+				S.push(arvoreBinaria);
+			}
+			else if(E.charAt(i)=='(') { 
+				
+			}
+			else if(E.charAt(i)==')') {
+				LinkedBinaryTree<String> T2 = new LinkedBinaryTree<String>();
+				T2=S.pop();
+				LinkedBinaryTree<String> T = new LinkedBinaryTree<String>();
+				T=S.pop();
+				LinkedBinaryTree<String> T1 = new LinkedBinaryTree<String>();
+				T1=S.pop();
+				T.attach(T.root(), T1, T2);
+				S.push(T);
+
+
+			}
+			
+		}
+		return S.pop();
+	}
 }

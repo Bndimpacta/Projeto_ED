@@ -13,7 +13,19 @@ public class tad_pilha_lse {
 		System.out.println("\n ===== TAD-PILHA-ARRAY ===== \n");
 		System.out.println("     Antes!!!\n" +
 		"Hora da explicação");
-		System.out.println("\n Descrição " + " Description \n");
+		System.out.println("\n Na implementação da Pilha usando Array há o problema de ter que antecipar o tamanho máximo da pilha.\r\n"
+				+ "Para evitar esse problema, será utilizada a LSE, onde os nodos são alocados dinamicamente.\r\n"
+				+ "\r\n"
+				+ "O topo da pilha será a cabeça lista, pois a inserção e  remoção de elementos é extremamente eficiente..\r\n"
+				+ "\r\n"
+				+ "Assim, esta implementação não requer que uma exceção seja criada ao se deparar com o problema de estouro do tamanho.\r\n"
+				+ "\r\n"
+				+ "Usa-se uma variável de instância, top, para referenciar a cabeça da lista\r\n"
+				+ "(que irá apontar para o objeto null se a lista estiver vazia). \r\n"
+				+ "Da mesma forma, quando se retira um elemento da pilha, simplesmente remove-se o nodo da cabeça da lista e retorna-se seu elemento. \r\n"
+				+ "\r\n"
+				+ "Assim, executam-se todas as inserções e remoções de elementos na cabeça da lista.\r\n"
+				+ " \r\n");
 		
 		Scanner entrada = new Scanner(System.in);
 		int indice = 0;

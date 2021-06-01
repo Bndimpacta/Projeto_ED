@@ -7,6 +7,7 @@ import tad_dicionario.tad_dicionario;
 import tad_fila_array.tad_fila_array;
 import tad_fila_de_prioridade.tad_fila_de_prioridade;
 import tad_fila_lse.tad_fila_lse;
+import tad_grafos.tad_grafos;
 import tad_lista_arranjo.tad_lista_arranjo;
 import tad_lista_de_nodos.tad_lista_de_nodos;
 import tad_mapa.tad_mapa;
@@ -36,7 +37,7 @@ public class main {
 		tad_dicionario dicionario = new tad_dicionario();
 		tad_mapa_ordenado_abb mapaOrdenado = new tad_mapa_ordenado_abb();
 		tad_ordenado_avl mapaOrdenadoAvl = new tad_ordenado_avl();
-		
+		tad_grafos grafos = new tad_grafos(); 
 		Scanner entrada = new Scanner(System.in);
 		boolean sair = false;
 		while(!sair){
@@ -49,7 +50,7 @@ public class main {
 			System.out.println("5 - TAD-Fila-LSE");
 			System.out.println("6 - TAD-Lista de Nodos");
 			System.out.println("7 - TAD-Árvore Genérica");
-			System.out.println("8 - TAD-Árvore Binária //com erros");
+			System.out.println("8 - TAD-Árvore Binária");
 			System.out.println("9 - TAD-Fila de Prioridade");
 			System.out.println("10 - TAD-Mapa");
 			System.out.println("11 - TAD-Dicionário");
@@ -81,10 +82,15 @@ public class main {
 					listaNodos.lista_de_nodos();
 					break;
 				case 7: //TAD-Árvore Genérica
-					System.out.println("Ainda não implmentado, sera implementado em versões futuras");
+					System.out.println("\nSentimos muito \n" + "Recurso ainda não implmentado, \n "
+							+ "Mas não preocupe nossa equipe está trabalhando noite e dia para te oferecer um programa melhor \n"
+							+ "sera implementado em versões futuras.");
 					break;
 				case 8: //TAD-Árvore Binária  /Apresenta Erro
-					System.out.println("Ainda não implmentado, sera implementado em versões futuras");
+					arvoreBinaria.arvore_binaria();
+					System.out.println("\nSentimos muito \n" + "Recurso ainda não implmentado, \n "
+							+ "Mas não preocupe nossa equipe está trabalhando noite dia para te oferecer um programa melhor \n"
+							+ "sera implementado em versões futuras.");
 					break;
 				case 9: //TAD-Fila de Prioridade
 					filaPrioridade.filaDePrioridade();
@@ -102,8 +108,7 @@ public class main {
 					mapaOrdenadoAvl.tadMapaOrdenadoAvl();
 					break;
 				case 14: //TAD-Grafos
-					System.out.println("Ainda não implmentado, sera implementado em versões futuras");
-					break;
+					grafos.grafos();
 				default: System.out.println("Opção inválida!");
 			}
 			System.out.println();

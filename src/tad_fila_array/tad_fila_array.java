@@ -13,7 +13,8 @@ public class tad_fila_array {
 		System.out.println("\n ===== TAD-FILA-ARRAY ===== \n");
 		System.out.println("     Antes!!!\n" +
 		"Hora da explicação");
-		System.out.println("\n Descrição" + "Description \n");
+		System.out.println("\nA fila é uma coleção de objetos que são inseridos e \n"
+		+"removidos de acordo com o princípio: “o primeiro que entra é o primeiro que sai”(First-In-First-Out: FIFO).\n");
 		
 		Scanner entrada = new Scanner(System.in);
 		int indice = 0;

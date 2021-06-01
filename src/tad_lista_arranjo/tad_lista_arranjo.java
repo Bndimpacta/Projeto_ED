@@ -13,7 +13,10 @@ public class tad_lista_arranjo {
 		System.out.println("\n ===== TAD-LISTA-ARRANJO ===== \n");
 		System.out.println("     Antes!!!\n" +
 		"Hora da explicação");
-		System.out.println("\n Descrição" + "Description \n");
+		System.out.println("\n Uma lista arranjo (ou vetor) é uma coleção S de N elementos armazenados em uma certa ordem linear,\n" 
+		+ "de maneira que é possível se referir aos elementos de S como 1º, 2º, 3º e assim por diante.\n"
+		+ "Usamos o intervalo [0, n - 1] para acessar cada elemento x de S, então o primeiro elemento de S tem índice 0,\n" 
+		+ "e o último tem índice n - 1. \n");
 		
 		Scanner entrada = new Scanner(System.in);
 		int indice = 0;
