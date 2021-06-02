@@ -3,6 +3,7 @@ package Projeto_ED;
 import java.util.Scanner;
 
 import tad_arvore_binaria.tad_arvore_binaria;
+import tad_arvore_generica.tad_arvore_generica;
 import tad_dicionario.tad_dicionario;
 import tad_fila_array.tad_fila_array;
 import tad_fila_de_prioridade.tad_fila_de_prioridade;
@@ -30,7 +31,7 @@ public class main {
 		tad_fila_array filaArray = new tad_fila_array();
 		tad_fila_lse filaLse = new tad_fila_lse();
 		tad_lista_de_nodos listaNodos = new tad_lista_de_nodos();
-		
+		tad_arvore_generica arvoreGenerica = new tad_arvore_generica();
 		tad_arvore_binaria arvoreBinaria = new tad_arvore_binaria(); 
 		tad_fila_de_prioridade filaPrioridade = new tad_fila_de_prioridade();
 		tad_mapa mapa = new tad_mapa();
@@ -82,12 +83,9 @@ public class main {
 					listaNodos.lista_de_nodos();
 					break;
 				case 7: //TAD-Árvore Genérica
-					System.out.println("\nSentimos muito \n" + "Recurso ainda não implmentado, \n "
-							+ "Mas não preocupe nossa equipe está trabalhando noite e dia para te oferecer um programa melhor \n"
-							+ "sera implementado em versões futuras.");
+					arvoreGenerica.arvoreGenerica();
 					break;
 				case 8: //TAD-Árvore Binária  /Apresenta Erro
-					arvoreBinaria.arvore_binaria();
 					System.out.println("\nSentimos muito \n" + "Recurso ainda não implmentado, \n "
 							+ "Mas não preocupe nossa equipe está trabalhando noite dia para te oferecer um programa melhor \n"
 							+ "sera implementado em versões futuras.");

@@ -9,7 +9,7 @@ public class tad_arvore_binaria {
 	main principal = new main();
 	LinkedBinaryTree arvoreBinaria = new LinkedBinaryTree();
 	
-	public void arvore_binaria() {
+	public void arvoreBinaria() {
 		System.out.println("\n ===== TAD-ÁRVORE-BINÁRIA ===== \n");
 		System.out.println("     Antes!!!\n" +
 		"Hora da explicação");
@@ -92,7 +92,6 @@ public class tad_arvore_binaria {
 		arvoreBinaria.root();
 		arvoreBinaria.addRoot(elemento);
 		arvoreBinaria.desenhaArvore(arvoreBinaria, arvoreBinaria.root(), 0, 0);
-		System.out.print(arvoreBinaria.toString());
 	}
 
 	public LinkedBinaryTree<String> BuildExpression(String E){
